@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="body-container">
+        <div id="checkout">
+            <div class="summary">
+                <div class="topic">
+                    <h1 class="field-topic">Order summarary</h1>
+                </div>
+                <div class="summary-details-wrap">
+                    <div class="content">
+                        <p>Reference :</p>
+                        <p id="ref-num">900179000000000000000</p>
+                    </div>
+                    <div class="content">
+                        <p>Description :</p>
+                        <p>Bill Payment</p>
+                    </div>
+                    <div class="content">
+                        <p>Amount(LKR) :</p>
+                        <p id="total-price">Rs. 10.00/-</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="payment-details">
+                <div class="topic">
+                    <div class="text-contects">
+                        <h1 class="field-topic">Payment Details</h1>
+                        <p><span>*</span> indicates a required field</p>
+                    </div>
+                    <div class="icon">
+                        <img src="./assets/visa_card.jpeg" alt="visa card image">
+                    </div>
+                </div>
+    
+                <div class="error-field" id="error-pay"><p></p></div>
+                <div class="card-details">
+                    <div class="fields-container">
+                        <label for="card-number">Card Number <span>*</span></label>
+                        <input type="password" name="card-number" placeholder="0000-0000-0000-0000" id="card-number" oninput="cardNumberValidation()">
+                    </div>
+                    <div class="fields-container">
+                        <label for="cardholder">Cardholder's Name <span>*</span></label>
+                        <input type="text" name="cardholder" placeholder="Cardholder's name" id="cardholder" oninput="cardHoldersNameValidation()">
+                    </div>
+                    <div class="fields-container">
+                        <label for="expire">Expire date <span>*</span></label>
+                        <input type="month" id="expiration-date" name="expiration-date" placeholder="Expire Date" min="2023-03"  max="2030-12" oninput="expireDateValidation()">
+                    </div>
+                    <div class="fields-container">
+                        <label for="security-code">Security code <span>*</span></label>
+                        <div class="code-wrapp">
+                            <div>
+                                <input type="number" id="security-code" name="security-code" min="000"  max="999" placeholder="CVV" oninput="cvv_Validation()">
+                            </div>
+                            <img id="security-code-image" src="./assets/security-code.jpg" alt="">
+                            <p class="information">Last 3 digits on the back of card</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="billing-address">
+                <div class="topic">
+                    <h1 class="field-topic">Billing address</h1>
+                    <div class="arrow-head icon" onclick="showEditForm()">
+                        <p id="edit-keyword">Edit</p>
+                        <img id="arrow-key" src="./assets/arrow-head.png" alt="">
+                    </div>
+                </div>
+                <div id="show-field">
+                    <p id="maked-address">151/A/28, diwelwatta, kadurudwa, wanchawela.</p>
+                </div>
+                <div id="form">
+                    <form id="edit-address-form">
+                        <div class="error-field" id="error-a"><p></p></div>
+                        <div class="card-details edit-field">
+                            <div class="fields-container">
+                                <label for="address1">Address line 1 <span>*</span></label>
+                                <input type="text" name="address1" id="address1" placeholder="Address line 1" oninput="addressLine1Validation()">
+                            </div>
+                            <div class="fields-container">
+                                <label for="address2">Address line 2</label>
+                                <input type="text" name="address2" id="address2" placeholder="Address line 2">
+                            </div>
+                            <div class="fields-container">
+                                <label for="address3">Address line 3</label>
+                                <input type="text" name="address3" id="address3" placeholder="Address line 3">
+                            </div>
+                            <div class="fields-container">
+                                <label for="town">Town /City <span>*</span></label>
+                                <input type="text" name="town" id="town" placeholder="Town / City" oninput="townValidation()">
+                            </div>
+                            <div class="fields-container">
+                                <label for="state">State /Region <span>*</span></label>
+                                <input type="text" name="state" id="state" placeholder="State / Region" oninput="stateValidation()">
+                            </div>
+                            <div class="fields-container">
+                                <label for="postalcode">Postalcode /Zip code <span>*</span></label>
+                                <input type="text" name="postalcode" id="postalcode" placeholder="Zip code" oninput="postalcodeValidation()">
+                            </div>
+                            <div class="fields-container">
+                                <label for="country">Country <span>*</span></label>
+                                <input type="text" name="country" id="country" placeholder="Country" oninput="countryValidation()">
+                            </div>
+                        </div>
+        
+                        <div class="buttons">
+                            <input type="button" value="Cancel changes" id="cancel" class="cancel-btn" onclick="cancelEditedContent()">
+                            <input type="button" value="Confirm" id="confirm" class="confirm-btn" onclick="saveEditedContent()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+    
+            <div class="contact-details">
+                <div class="topic">
+                    <h1 class="field-topic">Contact details</h1>
+                    <div class="arrow-head icon" onclick="showContactEditForm()">
+                        <p id="edit-keyword-c">Edit</p>
+                        <img id="arrow-key-c" src="./assets/arrow-head.png" alt="">
+                    </div>
+                </div>
+                <div id="show-field-c">
+                    <p id="maked-mobile"></p>
+                    <p id="maked-email"></p>
+                </div>
+                <div id="c-form">
+                    <form id="edit-contact-form">
+                        <div class="error-field" id="error-c"><p></p></div>
+                        <div class="card-details edit-field">
+                            <div class="fields-container">
+                                <label for="phone_number">Phone number <span>*</span></label>
+                                <input type="text" name="phone_number" id="phone_number" placeholder="+94 71 123 5673" oninput="phoneNumberValidation()">
+                            </div>
+                            <div class="fields-container">
+                                <label for="email">Email </label>
+                                <input type="text" name="email" id="email" placeholder="example@gmail.com" oninput="emailValidation()">
+                            </div>
+                        </div>
+        
+                        <div class="buttons">
+                            <input type="button" value="Cancel changes" id="cancel-c" class="cancel-btn" onclick="cancelContactEditedContent()">
+                            <input type="button" value="Confirm" id="confirm-c" class="confirm-btn" onclick="saveContactEditedContent()">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="buttons-submit">
+                <input type="button" value="Cancel" id="cancel-submittion" class="cancel-btn" onclick="cancelSubmission()">
+                <input type="button" value="Submit" id="submit" class="confirm-btn" onclick="saveTheForm()">
+            </div>
+        </div>
+        <div id="success">
+            <img src="./assets/success.png" alt="">
+            <h1>Successfully Submitted</h1>
+            <p>Thank you for placing your order</p>
+            <p id="countDown"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="bottom-container">
+          <div class="left">
+            <h3>Contact us</h3>
+            <div class="url-container">
+                
+                <div  class="facebook-icon">
+                    <img src="../Assets/icons/facebook.png" alt="" class="icon" onclick="window.open('https://www.facebook.com/pasindu.geevinda.9')">
+                </div>
+                <div  class="instagram-icon">
+                    <img src="../Assets/icons/instagram.png" alt="" class="icon" onclick="window.open('https://www.instagram.com/gee_vinda/')">
+                </div>
+                <div  class="linkedin-icon">
+                    <img src="../Assets/icons/linkedin.png" alt="" class="icon" onclick="window.open('https://lk.linkedin.com/in/pasindu-geevinda-44a23b222')">
+                </div>
+                <div  class="twitter-icon">
+                    <img src="../Assets/icons/twitter.png" alt="" class="icon" onclick="window.open('https://lk.linkedin.com/in/pasindu-geevinda-44a23b222')">
+                </div>
+            </div>
+          </div>
+          <div class="right">
+            <h3>Page Editor</h3>
+            <button  onclick="window.location.href='../Editor/geevinda.html';" id="page-editor">Editor</button>
+          </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

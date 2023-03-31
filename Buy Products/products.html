@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="../Assets/icons/logo.png" alt="">
+        <ul class="nav-links">
+            <li><a href="../Home/home.html">Home</a></li>
+            <li class="active"><a href="../Buy Products/products.html">Products</a></li>
+            <li><a href="../SiteMap/sitemap.html">Site Map</a></li>
+            <li><a href="../Gallery/Gallery.html">Gallery</a></li>
+            <li><a href="../Favs/favs.html">Favs</a></li>
+            <li><a href="../AboutUs/aboutUs.html">About us</a></li>
+            <li><a href="../Feedback/feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+        
+    <div class="container-body">
+        <div class="products-container">
+            <div class="items">
+                <div class="books-container">
+    
+                    <div class="books">
+                        <p id="book1-topic"> Our village</p>
+                        <img id="book1-img" src="./assets/apegama.jpeg" alt="">
+                        <p id="book1-auth">Martin Wickramasinghe</p>
+                        <p id="book1-price">LKR 189.00/-</p>
+                        <div class="quantity">
+                            <label for="book1-qty">Select quantity</label>
+                            <input type="number" name="book1-qty" id="book1-qty" value="0">
+                        </div>
+                          
+                    </div>
+    
+                    <div class="books">
+                        <p id="book2-topic">Kali Yugaya</p>
+                        <img id="book2-img" src="./assets/kaliyugaya.jpeg" alt="">
+                        <p id="book2-auth">Martin Wickramasinghe</p>
+                        <p id="book2-price">LKR 189.00/-</p>
+                        <div class="quantity">
+                            <label for="book2-qty">Select quantity</label>
+                            <input type="number" name="book2-qty" id="book2-qty" value="0">
+                        </div>
+                    </div>
+    
+                    <div class="books">
+                        <p id="book3-topic">The mirage</p>
+                        <img id="book3-img" src="./assets/miringuwa.jpeg" alt="">
+                        <p id="book3-auth">Martin Wickramasinghe</p>
+                        <p id="book3-price">LKR 189.00/-</p>
+                        <div class="quantity">
+                            <label for="book3-qty">Select quantity</label>
+                            <input type="number" name="book3-qty" id="book3-qty" value="0">
+                        </div>
+                    </div>
+    
+                    <div class="books">
+                        <p id="book4-topic">Gamperaliya</p>
+                        <img id="book4-img" src="./assets/gamperaliya.jpg" alt="">
+                        <p id="book4-auth">Martin Wickramasinghe</p>
+                        <p id="book4-price">LKR 189.00/-</p>
+                        <div class="quantity">
+                            <label for="book4-qty">Select quantity</label>
+                            <input type="number" name="book4-qty" id="book4-qty" value="0">
+                        </div>
+                    </div>
+                    
+                    <div class="books">
+                        <p id="book5-topic">Viragaya</p>
+                        <img id="book5-img" src="./assets/viragaya.jpeg" alt="">
+                        <p id="book5-auth">Martin Wickramasinghe</p>
+                        <p id="book5-price">LKR 189.00/-</p>
+                        <div class="quantity">
+                            <label for="book5-qty">Select quantity</label>
+                            <input type="number" name="book5-qty" id="book5-qty" value="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-details">
+                <h2>Your order basket</h2>
+                <div class="orders">
+                    <table class="table">
+                        <tr class="raw-0 raw">
+                          <td class="name">List :</td>
+                          <td class="count"> Quantity </td>
+                          <td class="price-l"> Price  </td>
+                        </tr>
+                        <tr class="raw-1 raw">
+                          <td id="name-1"></td>
+                          <td id="count-1"> 0 </td>
+                          <td id="price-1"> 0.00/- </td>
+                        </tr>
+                        <tr class="raw-2 raw">
+                          <td id="name-2"></td>
+                          <td id="count-2"> 0 </td>
+                          <td id="price-2"> 0.00/- </td>
+                        </tr>
+                        <tr class="raw-3 raw">
+                          <td id="name-3"></td>
+                          <td id="count-3"> 0 </td>
+                          <td id="price-3"> 0.00/- </td>
+                        </tr>
+                        <tr class="raw-4 raw">
+                          <td id="name-4"></td>
+                          <td id="count-4"> 0 </td>
+                          <td id="price-4"> 0.00/- </td>
+                        </tr>
+                        <tr class="raw-5 raw">
+                          <td id="name-5"></td>
+                          <td id="count-5"> 0 </td>
+                          <td id="price-5"> 0.00/- </td>
+                        </tr>
+                    </table>
+                    
+                    <div class="total">
+                        <p>Total :</p>
+                        <div class="price">
+                            <p>LKR. </p>
+                            <p class="total-price">0.00/-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h2 class="topic-c" id="proceed-topic">Proceed to checkout</h2>
+        <form id="prerequest-details">
+            <div class="container">
+                <p id="error"></p>
+                <div class="contact-info">
+                    <div class="phone-num flex">
+                        <label for="phone">Phone Number :</label>
+                        <input type="tel" name="phone_number" id="phone" placeholder="+94 71 123 5673" oninput="phoneNumberValidation()" required>
+                    </div>
+                    
+                    <div class="email-con flex">
+                        <label for="email">Email Address :</label>
+                        <input type="text" name="email" id="email" placeholder="example@gmail.com" oninput="emailValidation()" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-container">
+                <div class="express-delivery">
+                    <label for="express">Express Delivery (+ LKR. 300.00/-):  </label>
+                    <input type="checkbox" name="express" id="express" onclick="expressClicked()">
+                </div>
+                <div class="total-b">
+                    <p>Total :</p>
+                    <div class="price">
+                        <p>LKR. </p>
+                        <p class="total-price">0.00/-</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="cancelBuy()" id="cancel">Back</button>
+                    <button type="button" onclick="submitContact()" id="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="empty"></div>
+    </div>
+
+    
+    <footer>
+        <div class="bottom-container">
+          <div class="left">
+            <h3>Contact us</h3>
+            <div class="url-container">
+                
+                <div  class="facebook-icon">
+                    <img src="../Assets/icons/facebook.png" alt="" class="icon" onclick="window.open('https://www.facebook.com/pasindu.geevinda.9')">
+                </div>
+                <div  class="instagram-icon">
+                    <img src="../Assets/icons/instagram.png" alt="" class="icon" onclick="window.open('https://www.instagram.com/gee_vinda/')">
+                </div>
+                <div  class="linkedin-icon">
+                    <img src="../Assets/icons/linkedin.png" alt="" class="icon" onclick="window.open('https://lk.linkedin.com/in/pasindu-geevinda-44a23b222')">
+                </div>
+                <div  class="twitter-icon">
+                    <img src="../Assets/icons/twitter.png" alt="" class="icon" onclick="window.open('https://lk.linkedin.com/in/pasindu-geevinda-44a23b222')">
+                </div>
+            </div>
+          </div>
+          <div class="right">
+            <h3>Page Editor</h3>
+            <button  onclick="window.location.href='../Editor/geevinda.html';" id="page-editor">Editor</button>
+          </div>
+        </div>
+    </footer>
+</body>
+
+
+<script src="./script.js"></script>
+</html>
