@@ -1,0 +1,512 @@
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 9999;
+}
+
+.navbar > img{
+    position: relative;
+    font-size: 32px;
+    text-align: left;
+    margin-left: 2%;
+    top: 2%;
+    width: 10%;
+}
+ 
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    position: relative;
+    margin-right: 5%;
+    top: 25%;
+}
+  
+.nav-links li {
+    display: inline-block;
+    padding: 0 10px;
+    padding: 10px;
+    line-height: 35px;
+    width: 100%;
+    height: 75%;
+}
+
+.nav-links li:hover {
+    display: inline-block;
+    border: 2px solid #a74d4d;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.active {
+    display: inline-block;
+    border: 2px solid #FF7676;
+    box-shadow: 0 0 10px 5px #a74d4d;
+    margin-left: 2%;
+    margin-right: 2%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+  
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-size: 14px;
+}
+
+/* mine */
+*{
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+}
+
+.html{
+font-size: 16px;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+.maintopic{
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    height: 72vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-image: url("./assets/Welcome-Image.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+.container::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.75); /* change the opacity as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.site-name{
+    font-size: 8.5rem;
+    
+}
+
+.maintopic > p{ 
+    font-size: 1.5rem;
+    padding-top: 4.5%;
+}
+
+.gallery{
+    display: flex;
+    height: 72vh;
+    margin-top: 50px;
+}
+
+.gallery-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+}
+
+.gallery-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.gallery-image > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.gallery-image{
+    width:30%;
+    height: 50%;
+    margin: 1%;
+    border: 2px solid aqua;
+    text-align: center;
+}
+
+.gallery-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-link{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-quote { 
+    padding-top: 15%;
+    padding-left: 10%;
+    padding-right: 2%;
+}
+
+.gallery-quote > p{
+    font-size: 1.5rem;
+}
+
+.gallery-quote-name{
+    padding-top: 5%;
+}
+
+.gallery-link{ 
+    padding-top: 14.5%;
+    padding-left: 10%;
+}
+
+.gallery-link > p{ 
+    font-size: 1.2rem;
+}
+
+.gallery-btn{
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+    background-color: #633B48  ;
+    color: white;
+    width: 40%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.gallery-btn:hover{
+    color: white;
+    background-color: #422830;
+}
+
+.quiz {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-image: url("./assets/Quiz-image.jpg");
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+.quiz::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.8); /* change the opacity as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.quiz-body{
+    position: relative;
+    height: 72vh;
+    margin-top: 5%;
+}
+
+.quiz-container{
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    align-items: center;
+}
+
+.quiz-container > p :nth-child(n) {
+    font-size: 2rem;
+    padding-top: 1%;
+}
+
+.quiz-btn{
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+    background-color: #633B48  ;
+    color: white;
+    width: 40%;
+    width: 260px;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.quiz-btn:hover{
+    color: white;
+    background-color: #422830;
+}
+
+.quiz-container > div p {
+    font-size: 1.5rem;
+}
+
+.favs{
+    width: 100%;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 120px;
+}
+
+.fav-above{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center
+}
+
+.fav-image{
+    width: 15%;
+}
+
+.fav-image > img{
+    width: 100%;
+    padding:15%;
+
+}
+
+.fav-below{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+    align-items: center;
+    background-color: #292727;
+    width: 100%;
+    height: 60%;
+
+}
+
+.fav-quote{
+    width: 80%;
+}
+
+.fav-quote > p{
+    padding: 0.5%;
+}
+
+.fav-link{
+    text-align: center;
+}
+
+.fav-link > p{
+    padding-bottom: 2%;
+    font-size: 1rem;
+}
+
+.author{
+    font-size: 1.2rem;
+}
+
+.fav-btn:hover{
+    color: white;
+    background-color: #422830;
+}
+
+.fav-btn{
+    width: 260px;
+    height: 40px;
+    transition-duration: 0.4s;
+    background-color: #633B48  ;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1% 0;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    z-index: 1;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .url-container > div > img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .url-container > div > img:hover{
+    opacity: 0.6;
+  }
+
+  .url-container > div{
+    width: 16%;
+  }
+
+  .url-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left{
+    margin-left: 10%;
+    width: 16%;
+  }
+  .right{
+    margin-right: 10%;
+    width: 16%;
+  }
+
+  .right > button{
+    width: 100%;
+    height: 50%;
+    margin-top: 6px;
+    background-color: #633B48;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.right > button:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1200px) {
+    footer h3{
+        font-size: 12px;
+    }
+
+    .navbar > img{
+        width: 20%;
+    }
+
+    html{
+        font-size: 8px;
+    }
+
+    .nav-links{
+        width: 80%;
+    }
+
+    .gallery{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gallery{
+        flex-direction: column !important;
+    }
+
+    .gallery-left{
+        width: 100%;
+    }
+
+    .gallery-right{
+        margin-top: 5%;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .gallery-image{
+        width: 10%;
+    }
+
+    .quiz{
+        margin-top: 0.1%;
+    }
+
+    .quiz-body{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .quiz-body{
+        margin-top: 10%;
+    }
+}
+
+
+
+
+#page-editor{
+    color: white;
+}
