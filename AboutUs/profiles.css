@@ -6,9 +6,12 @@
 body{
     background-color: black;
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    width: 100vw;
+    height: 100vh !important;
+}
+
+html, body{
+    height: 100%;
 }
 .navbar {
     height: 100px;
@@ -17,7 +20,7 @@ body{
     position: fixed;
     width: 100%;
     background-color: black;
-    z-index: 9999;
+    z-index: 2;
 }
 
 .navbar > img{
@@ -83,17 +86,23 @@ body{
 }
 
 .body-container{
-    height: 72vh;
+    display: flex;
     padding-top: 20vh;
+    flex-direction: column;
+    padding-bottom: 15vh;
+}
+
+.body-container > h2{
+    margin-bottom: 20px;
 }
 
 .users{
-    margin:100px;
+    margin:0px 100px;
 }
 
 .url-container > div > img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     margin: 0;
     flex-direction: row;
@@ -145,10 +154,10 @@ body{
 }
 
 .container{
+    display: none;
     position: absolute;
     float: right;
     color: black;
-    z-index: 9999;
     bottom: 5%;
     right: -20%;
     text-align: right;
@@ -163,6 +172,7 @@ body{
 }
 
 .image-container:hover .container{
+    display: inline;
     animation-name: font-change;
     animation-duration: 0.5s;
     color: white;
@@ -191,7 +201,7 @@ body{
 
 @keyframes container_change {
     from{
-        background-color: #26242A;
+        /* background-color: #26242A; */
     }
     to{
         background-color: #633B48;
@@ -225,12 +235,12 @@ img{
 
 .image{
     width: 300px;
-    height: 200px;
+    height: 100%;
 }
 
 .image > img {
     width: 300px;
-    height: 200px;
+    height: 100%;
     
 }
 
@@ -274,10 +284,10 @@ img{
    font-size: 14px;
 }
 
---------------------------
+/* footer */
 footer {
     position: fixed;
-    bottom: 0%;
+    bottom: 0;
     padding: 1% 0;
     color: white;
     width: 100%;
@@ -291,7 +301,6 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 2%;
   }
 
   h3 {
@@ -352,15 +361,48 @@ footer {
     }
 
     html{
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .nav-links{
         width: 80%;
     }
+
+    .gallery{
+        height: 50vh;
+    }
 }
 
+@media screen and (max-width: 1000px) {
+    .gallery{
+        flex-direction: column !important;
+    }
 
-#page-editor{
-    color: white;
+    .gallery-left{
+        width: 100%;
+    }
+
+    .gallery-right{
+        margin-top: 5%;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .gallery-image{
+        width: 10%;
+    }
+
+    .quiz{
+        margin-top: 0.1%;
+    }
+
+    .quiz-body{
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .quiz-body{
+        margin-top: 10%;
+    }
 }
