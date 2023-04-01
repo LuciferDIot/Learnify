@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
 .navbar {
     height: 100px;
     display: flex;
@@ -72,11 +84,6 @@
 
 
 /* my part */
-*{
-    margin: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: white;
-}
 
 html{
     font-size: 16px;

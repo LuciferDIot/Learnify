@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
 .navbar {
     height: 100px;
     display: flex;
