@@ -121,14 +121,13 @@ button{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
-    border: 1px solid #FF7676;
 }
 
 .container-body{
     position: relative;
     align-content: stretch;
     top: 100px;
-    margin-bottom: 15%;
+    margin-bottom: 250px;
 }
 
 .products-container{
@@ -173,7 +172,6 @@ button{
     align-content: space-between;
     height: auto;
     background-color: #633B48;
-    box-shadow: 0 2px 4px #FF7676;
 }
 
 .books>img{
@@ -181,13 +179,12 @@ button{
 }
 
 .books p , label{
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 5%;
 }
 
 .books p:nth-of-type(1){
     font-size: 20px;
-    font-weight: bold;
     margin-bottom: 5%;
 }
 
@@ -303,10 +300,7 @@ input[type="text"], input[type="tel"] {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 100px;
-}
-
-.buttons{
+    margin-top: 8%;
     width: 20vw;
 }
 
@@ -339,7 +333,6 @@ input[type="text"], input[type="tel"] {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
 }
 
 label{
@@ -406,7 +399,6 @@ label{
 
     .books p:nth-of-type(1){
         font-size: 14px;
-        font-weight: bold;
         margin-bottom: 5%;
     }
 

@@ -15,7 +15,7 @@
         <img src="../assets/icons/logo.png" alt="">
         <ul class="nav-links">
             <li><a href="../Home/home.html">Home</a></li>
-            <li><a href="../Buy Products/products.html">Products</a></li>
+            <li><a href="../BuyProducts/products.html">Products</a></li>
             <li><a href="../SiteMap/sitemap.html">SiteMap</a></li>
             <li><a href="../Gallery/Gallery.html">Gallery</a></li>
             <li><a href="../Favs/favs.html">Favs</a></li>
@@ -24,90 +24,95 @@
         </ul>
     </nav>
 
+    
     <div class="Container">
-        <form name="myForm" onsubmit="return validateForm()" action="mailto: pasindu.20212016@iit.ac.lk" method="post" >
-            <h3>
-                Feedback Form
-            </h3>
-           <div class="feedback-0">
+        <form name="myForm" onsubmit="return validateForm()" action="mailto: pasindu.20212016@iit.ac.lk">
+            <h3>Feedback Form</h3>
+            <div class="feedback-0">
                 <div class="personel-name">
-                <p class="Pname">Enter Your Name<span>*</span></p>
-                <input type="text" id="name" placeholder="Your Name" name="Name" required>   
+                    <p class="Pname">Enter Your Name<span>*</span></p>
+                    <input type="text" id="name" placeholder="Your Name" name="Name" required>
+                    <p class="error-msg" id="error_msg-1"></p>
                 </div>
                 <div class="personal-email">
-                <p class="Pemail">Enter Your Email<span>*</span></p>
-                <input type="email" id="email" placeholder="Your email" name="Email"required>
+                    <p class="Pemail">Enter Your Email<span>*</span></p>
+                    <input type="email" id="email" placeholder="Your email" name="Email" required>
+                    <p class="error-msg" id="error_msg-2"></p>
                 </div>
                 <div class="personal-number">
-                <p class="Pnumber">Enter Your Mobile Number<span>*</span></p>
-                <input type="text" id="phone" placeholder="Phone No" name="Phone Number"required>
+                    <p class="Pnumber">Enter Your Mobile Number<span>*</span></p>
+                    <input type="text" id="phone" placeholder="Phone No" name="Phone Number" required>
+                    <p class="error-msg" id="error_msg-3"></p>
                 </div>
-           </div>
-            <div class="feedback-1">
-                <p>1.How satisfied were you with our website today? Choose from 1 to 5,where 1 is extremely dissatisfied and 5 is extremely satisfied *</p>
-                <div class="rate">
-                    <input type="radio" id="star5" name="Satisfaction Rate" value="5 Stars" />
-                    <label for="star5" title="text">5 stars</label>
-                    <input type="radio" id="star4" name="rate-1" value="4 Stars" />
-                    <label for="star4" title="text">4 stars</label>
-                    <input type="radio" id="star3" name="rate-1" value="3 Stars" />
-                    <label for="star3" title="text">3 stars</label>
-                    <input type="radio" id="star2" name="rate-1" value="2 Stars" />
-                    <label for="star2" title="text">2 stars</label>
-                    <input type="radio" id="star1" name="rate-1" value="1 Stars" required/>
-                    <label for="star1" title="text">1 star</label>
-                  </div>
             </div>
-
-            <div class="feedback-2">
-            <p>2. How did you want to complete this task today? (Optional)*</p>
-
-            <select name="Task Completion Method" id="Method"required>
-            <option value=text>--Select--</option>
-            <option value="Phone">Phone</option>
-            <option value="Website">Website</option>
-            <option value="Email">Email</option>
-            <option value="social Media">Social Media</option>
-            </select>
+            <div class="feedback-1">
+                <p>1.How satisfied were you with our websites today? Choose from 0 to 10,where 0 is extremely
+                dissatisfied and
+                10 is extremely satisfied<span>*</span></p>
+                <div class="rate">
+                    <input type="radio" id="star5" name="Satisfaction Rate" value="5 Stars" >
+                    <label for="star5" title="text">5 stars</label>
+                    <input type="radio" id="star4" name="Satisfaction Rate" value="4 Stars" >
+                    <label for="star4" title="text">4 stars</label>
+                    <input type="radio" id="star3" name="Satisfaction Rate" value="3 Stars" >
+                    <label for="star3" title="text">3 stars</label>
+                    <input type="radio" id="star2" name="Satisfaction Rate" value="2 Stars" >
+                    <label for="star2" title="text">2 stars</label>
+                    <input type="radio" id="star1" name="Satisfaction Rate" value="1 Stars" required >
+                    <label for="star1" title="text">1 star</label>
+                </div>
+                <p class="error-msg" id="error_msg-4"></p>
             </div>
 
             <div class="rating-text">
-                <p>3.Please could you give us your reasons for giving this rating</p>
-                <textarea name="rating-feedback" rows="5" cols="90" required></textarea>
+                <label for="rating-feedback">3.Please could you give us your reasons for giving this rating</label>
+                <textarea name="rating-feedback" id="rating-feedback" rows="5" cols="90" required></textarea>
             </div>
 
-            <div class="feedback-3" >
-                <p> 4. How easy was it to find information on this site *</p>
-                <input  type="radio" name="Information accessibility" id="rd1" value="Very Easy"/>
-                <label for="rd1">Very Easy</label><br/>
-                <input type="radio" name="Information accessibility" id="rd2" value="Easy"/>
-                <label for="rd2">Easy</label><br/>
-                <input type="radio" name="Information accessibility" id="rd3" value="Average"/>
-                <label for="rd3">Average</label><br/>
-                <input type="radio" name="Information accessibility" id="rd4" value="Difficult"/>
-                <label for="rd4">Difficult</label><br/>
-                <input type="radio" name="Information accessibility" id="rd5" value="Very Difficult"/>
-                <label for="rd5">Very Difficult</label><br/>
-                </div>
+            <div class="feedback-2">
+                <label for="Method">2. How did you want to complete this task today? (Optional)</label>
+                <select name="Task Completion Method" id="Method">
+                    <option value="Website">Website (Default)</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Email">Email</option>
+                    <option value="social Media">Social Media</option>
+                </select>
+                <p class="error-msg" id="error_msg-5"></p>
+            </div>
+
+            <div class="feedback-3">
+                <p>  4.How easy was it to find information on this site (Optional)</p>
+                <input type="radio" name="Information accessibility" id="rd1" value="Very Easy" >
+                <label for="rd1">Very Easy</label><br >
+                <input type="radio" name="Information accessibility" id="rd2" value="Easy" >
+                <label for="rd2">Easy</label><br >
+                <input type="radio" name="Information accessibility" id="rd3" value="Average" >
+                <label for="rd3">Average</label><br >
+                <input type="radio" name="Information accessibility" id="rd4" value="Difficult" >
+                <label for="rd4">Difficult</label><br >
+                <input type="radio" name="Information accessibility" id="rd5" value="Very Difficult" >
+                <label for="rd5">Very Difficult</label><br >
+                <p class="error-msg" id="error_msg-6"></p>
+            </div>
 
             <div class="feedback-4">
                 <p>5. How useful was the website to find informaton you need (Optional)</p>
-                <input  type="radio" name="Chances of revisiting the website" id="rd6" value="Extreamly Likely"/>
-                <label for="rd6">Extremely Useful</label><br/>
-                <input type="radio" name="Chances of revisiting the website" id="rd7" value="Very Likely"/>
-                <label for="rd7">Very Useful</label><br/>
-                <input type="radio" name="Chances of revisiting the website" id="rd8" value="Moderately Likely"/>
-                <label for="rd8">Moderately Useful</label><br/>
-                <input type="radio" name="Chances of revisiting the website" id="rd9" value="Slitely Likely"/>
-                <label for="rd9">Slightly Useful</label><br/>
-                <input type="radio" name="Chances of revisiting the website" id="rd10" value="Unlikely to return"/>
-                <label for="rd10">Not Useful</label><br/>
+                <input type="radio" name="Chances of revisiting the website" id="rd6" value="Extreamly Likely">
+                <label for="rd6">Extremely Useful</label><br >
+                <input type="radio" name="Chances of revisiting the website" id="rd7" value="Very Likely" >
+                <label for="rd7">Very Useful</label><br >
+                <input type="radio" name="Chances of revisiting the website" id="rd8" value="Moderately
+                Likely" >
+                <label for="rd8">Moderately Useful</label><br >
+                <input type="radio" name="Chances of revisiting the website" id="rd9" value="Slitely Likely" >
+                <label for="rd9">Slightly Useful</label><br >
+                <input type="radio" name="Chances of revisiting the website" id="rd10" value="Unlikely to
+                return" >
+                <label for="rd10">Not Useful</label><br >
+                <p class="error-msg" id="error_msg-7"></p>
             </div>
-
-          <button type="sumbit">Submit</button>
-          
+            <button class="form-button" type="submit" onclick="validateForm()">Submit</button>
         </form>
-
     </div>
 
     <footer>

@@ -17,10 +17,10 @@
             <ul class="nav-links">
                 <li><a href="../Home/home.html">Home</a></li>
                 <li><a href="../Buy Products/products.html">Products</a></li>
-                <li><a href="../SiteMap/sitemap.html">SiteMap</a></li>
+                <li><a href="../SiteMap/sitemap.html">Site Map</a></li>
                 <li class="active"><a href="../Gallery/Gallery.html">Gallery</a></li>
                 <li><a href="../Favs/favs.html">Favs</a></li>
-                <li><a href="../AboutUs/aboutUs.html">Us</a></li>
+                <li><a href="../AboutUs/aboutUs.html">About us</a></li>
                 <li><a href="../Feedback/feedback.html">Feedback</a></li>
             </ul>
         </nav>
@@ -29,6 +29,10 @@
             <div id="icon-container">
                 <img id="changeFontSizeButton" src="./Assets/fontIconLight.png" class="icon" alt="font-change">
                 <img id="changeThemeButton" src="./Assets/themeIconLight.png" class="icon" alt="theme-change">
+                <div class="color-picker">
+                    <input type="color" id="color-picker-first-half">
+                    <input type="color" id="color-picker-second-half">
+                </div>
             </div>
     
             <div style="text-align:center; font-size: 36px;">
@@ -52,7 +56,7 @@
                     <div class="column">
                         <img id="img-hover" src="./Assets/fantasy.png" alt="fantacy" style="width:100%" onmouseenter="HoveredImageDisplay(this);HoveredImageDescriptionDisplay('sourceDiv1');" onclick="">
                         <div class="description" id="sourceDiv1">
-                            <h3>Fantasy</h3>
+                            <h2>Fantasy</h2>
                             <p>Fantasy books involve stories with magical or supernatural elements, such as wizards,
                                 dragons, and mythical creatures.
                                 They often take place in a fictional world with its own rules and laws of magic. Fantasy
@@ -77,7 +81,7 @@
                         <img id="img-hover" src="./Assets/manga.png" alt="science fiction" style="width:100%"
                             onmouseover="HoveredImageDisplay(this);HoveredImageDescriptionDisplay('sourceDiv2');">
                         <div class="description" id="sourceDiv2">
-                            <h3>Manga</h3>
+                            <h2>Manga</h2>
                             <p>
                                 Manga is known for its distinctive visual style, characterized by large, expressive eyes, simplified facial features,
                                 and dynamic page layouts. It covers a wide range of genres, including action, romance, horror, comedy, and more. It is
@@ -97,7 +101,7 @@
                         <img id="img-hover" src="./Assets/historicalFiction.png" alt="historical fiction" style="width:100%"
                             onmouseover="HoveredImageDisplay(this);HoveredImageDescriptionDisplay('sourceDiv3');">
                         <div class="description" id="sourceDiv3">
-                            <h3>Historical fiction</h3>
+                            <h2>Historical fiction</h2>
                             <p>
                                 Historical fiction books are fictional stories set in a specific historical period or era.
                                 They often blend real-life
@@ -125,7 +129,7 @@
                         <img id="img-hover" src="./Assets/autobiography.png" alt="b" style="width:100%"
                             onmouseover="HoveredImageDisplay(this);HoveredImageDescriptionDisplay('sourceDiv4');">
                         <div class="description" id="sourceDiv4">
-                            <h3>Autobiography</h3>
+                            <h2>Autobiography</h2>
                             <p>
                                 Biography and autobiography books tell the life stories of real people, often famous or
                                 influential figures. These books
@@ -175,7 +179,7 @@
         <footer>
             <div class="bottom-container">
                 <div class="left">
-                    <h3>Contact us</h3>
+                    <h3 class="footer-h3">Contact us</h3>
                     <div class="url-container">
         
                         <div class="facebook-icon">
@@ -188,7 +192,7 @@
                         </div>
                         <div class="linkedin-icon">
                             <img src="../Assets/icons/linkedin.png" alt="" class="icon"
-                                onclick="window.open('https://lk.linkedin.com/in/pasindu-geevinda-44a23b222')">
+                                onclick="window.open('https://lk.linkedin.com/in/yashoba-wickramage-')">
                         </div>
                         <div class="twitter-icon">
                             <img src="../Assets/icons/twitter.png" alt="" class="icon"
@@ -197,8 +201,8 @@
                     </div>
                 </div>
                 <div class="right">
-                    <h3>Page Editor</h3>
-                    <button  onclick="window.location.href='../Editor/yashobha.html';" id="page-editor">Editor</button>
+                    <h3 class="footer-h3">Page Editor</h3>
+                    <button  onclick="window.location.href='../Editor/yashoba.html';" id="page-editor">Editor</button>
                 </div>
             </div>
         </footer>

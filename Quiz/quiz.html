@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- html used for the countdown clock  -->
     <div id="clockdiv">
         <h2>Countdown</h2>
         <div>
@@ -15,10 +16,12 @@
           <div class="text">Seconds</div>
         </div>
     </div>
-    <h3 id="result"></h3> 
+    <!-- tag used to show the results of the quiz -->
+    <h3 id="result">Started !!</h3> 
+    <!-- container with questions and answers -->
         <div class = "container">
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 1. Who is the author of the Harry Potter series? </b></p><br>
                     <div>
                         <input type="radio" name="q1" value="a" id="q1a">
@@ -26,7 +29,7 @@
                     </div>
                     <div>
                         <input type="radio" name="q1" value="b" id="q1b">
-                        <label for="q1b" id="a1">Rowling, J.K.------</label>
+                        <label for="q1b" id="a1">Rowling, J.K.</label>
                     </div>
                     <div>
                         <input type="radio" name="q1" value="c" id="q1c">
@@ -36,15 +39,15 @@
                         <input type="radio" name="q1" value="d" id="q1d">
                         <label for="q1d">James, E. L</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
             
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 2. What is the most sellng book in the world? </b></p><br>
                     <div>
                         <input type="radio" name="q2" value="a" id="q2a">
-                        <label for="q2a" id="a2">Da Vinci Code,The------</label>
+                        <label for="q2a" id="a2">Da Vinci Code,The</label>
                     </div>
                     <div>
                         <input type="radio" name="q2" value="b" id="q2b">
@@ -58,15 +61,15 @@
                         <input type="radio" name="q2" value="d" id="q2d">
                         <label for="q2d">Breaking Dawn</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 3. What is the most read book in the world? </b></p><br>
                     <div>
                         <input type="radio" name="q3" value="a" id="q3a">
-                        <label for="q3a" id="a3">Bible-----</label>
+                        <label for="q3a" id="a3">Bible</label>
                     </div>
                     <div>
                         <input type="radio" name="q3" value="b" id="q3b">
@@ -80,11 +83,11 @@
                         <input type="radio" name="q3" value="d" id="q3d">
                         <label for="q3d">Year Book</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 4. What is the name of the fictional city where Charles Dickens' "Oliver Twist" is set? </b></p><br>
                     <div>
                         <input type="radio" name="q4" value="a" id="q4a">
@@ -100,13 +103,13 @@
                     </div>
                     <div>
                         <input type="radio" name="q4" value="d" id="q4d">
-                        <label for="q4d" id="a4">London-----</label>
+                        <label for="q4d" id="a4">London</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 5. Who wrote the classic novel "1984"? </b></p><br>
                     <div>
                         <input type="radio" name="q5" value="a" id="q5a">
@@ -118,17 +121,17 @@
                     </div>
                     <div>
                         <input type="radio" name="q5" value="c" id="q5c">
-                        <label for="q5c" id="a5">George Orwell----</label>
+                        <label for="q5c" id="a5">George Orwell</label>
                     </div>
                     <div>
                         <input type="radio" name="q5" value="d" id="q5d">
                         <label for="q5d">Aldous Huxley</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 6. Which of these books was written by Jane Austen? </b></p><br>
                     <div>
                         <input type="radio" name="q6" value="a" id="q6a">
@@ -140,17 +143,17 @@
                     </div>
                     <div>
                         <input type="radio" name="q6" value="c" id="q6c">
-                        <label for="q6c" id="a6">Pride and Prejudice------</label>
+                        <label for="q6c" id="a6">Pride and Prejudice</label>
                     </div>
                     <div>
                         <input type="radio" name="q6" value="d" id="q6d">
                         <label for="q6d">Wuthering Heights</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 7. What is the title of the first book in J.R.R. Tolkien's "The Lord of the Rings" series? </b></p><br>
                     <div>
                         <input type="radio" name="q7" value="a" id="q7a">
@@ -166,13 +169,13 @@
                     </div>
                     <div>
                         <input type="radio" name="q7" value="d" id="q7d">
-                        <label for="q7d" id="a7">The Fellowship of the Rings-----</label>
+                        <label for="q7d" id="a7">The Fellowship of the Rings</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 8. In "The Hitchhiker's Guide to the Galaxy" by Douglas Adams, what is the answer to the ultimate question of life, the universe, and everything? </b></p><br>
                     <div>
                         <input type="radio" name="q8" value="a" id="q8a">
@@ -188,13 +191,13 @@
                     </div>
                     <div>
                         <input type="radio" name="q8" value="d" id="q8d">
-                        <label for="q8d" id="a8">42-----</label>
+                        <label for="q8d" id="a8">42</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 9. Which of these books is a memoir by Malala Yousafzai? </b></p><br>
                     <div>
                         <input type="radio" name="q9" value="a" id="q9a">
@@ -202,7 +205,7 @@
                     </div>
                     <div>
                         <input type="radio" name="q9" value="b" id="q9b">
-                        <label for="q9b" id="a9">"I Am Malala"------</label>
+                        <label for="q9b" id="a9">"I Am Malala"</label>
                     </div>
                     <div>
                         <input type="radio" name="q9" value="c" id="q9c">
@@ -212,15 +215,15 @@
                         <input type="radio" name="q9" value="d" id="q9d">
                         <label for="q9d">"The Diary of a Young Girl"</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
 
-            <section class = "questions">
-                <article>
+            <div class = "questions">
+                <div>
                     <p><b> 10. Which of these books is NOT part of the "Chronicles of Narnia" series by C.S. Lewis? </b></p><br>
                     <div>
                         <input type="radio" name="q10" value="a" id="q10a">
-                        <label for="q10a" id="a10">The Hobbit-----</label>
+                        <label for="q10a" id="a10">The Hobbit</label>
                     </div>
                     <div>
                         <input type="radio" name="q10" value="b" id="q10b">
@@ -234,13 +237,15 @@
                         <input type="radio" name="q10" value="d" id="q10d">
                         <label for="q10d">The Magician's Nephew</label>
                     </div>
-                </article>
-            </section>
+                </div>
+            </div>
+            <!-- Buttons to navigate back to the instruction page and subit answers  -->
             <div class="buttons">
                 <button type="button" id="cancel"  onclick="goBack()">cancel</button>   
                 <button type="button"  onclick="checkAnswers()">Submit</button>   </div>    
             <script src ="./script.js"></script>
         </div>
+        <!-- footer consist of the links to social media and page editor -->
         <footer>
             <div class="bottom-container">
               <div class="left">

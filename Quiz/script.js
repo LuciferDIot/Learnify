@@ -1,12 +1,15 @@
+//Calling countdown function at the start of quiz
 countDown();
+
+//Function for check the answers in the quiz
 function checkAnswers() {
     var total = 0;
-    if (document.getElementById("q1b").checked === true){
+    if (document.getElementById("q1b").checked){
         total+=1;
     }else{
         document.querySelector("#a1").style.backgroundColor ="#FF7676"; 
     }
-    if (document.getElementById("q2a").checked === true){
+    if (document.getElementById("q2a").checked){
         total+=1;
     }else{
         document.querySelector("#a2").style.backgroundColor ="#FF7676";
@@ -58,6 +61,7 @@ function checkAnswers() {
     clearInterval(interval);
 }
 
+//Function to create the countdown an auto submit when the time ends
 var interval;
 
 function countDown(){
@@ -74,10 +78,10 @@ function countDown(){
         countClosed = true;
         checkAnswers();
     }
-    }, 1000);
-    //in setInterval method, second index used to that 1st indexed method must be execute, every seconds that entered on first index.
-  }
+    }, 1000); 
+}
 
-  function goBack(){
-    window.location.href = "../Instructions/instructions.html";
-  }
+//Function to return back to instructions page
+function goBack(){
+   window.location.href = "../Instructions/instructions.html";
+}

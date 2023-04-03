@@ -2,12 +2,6 @@
   margin: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   color: white;
-  padding: 0;
-  border: 0;
-}
-
-html{
-  font-size: 16px;
 }
 
 #result{
@@ -53,7 +47,6 @@ html{
 	padding: 10px;
 	border-radius: 3px;
   background: #af516e;
-	/* background: #00BF96; */
   text-align: center;
 	display: inline-block;
 }
@@ -62,7 +55,6 @@ html{
 	padding: 15px;
 	border-radius: 3px;
   background: rgb(211, 106, 129);
-	/* background: #00816A; */
 	display: inline-block;
   margin: 0px 0px 5px ;
 }
@@ -75,7 +67,6 @@ html{
 body {
   margin-top: 100px;
   background-color: black;
-  /*overflow: auto;*/
   margin-bottom: 150px;
   
 }
@@ -86,7 +77,6 @@ body {
 }
 
 .questions {
-    /* margin: 20px; */
   border-radius: 5px;
   background-color: rgb(41, 40, 40);
   padding: 20px;
@@ -103,7 +93,7 @@ input[type="radio"]:checked + label {
   color: black;
 }
 
-article > div{
+.questions> div > div{
   display: flex;
 }
 
@@ -119,7 +109,6 @@ label {
   margin-bottom: 10px; 
   padding: 7px 3px; 
   border-radius: 5px;
-  /*border-style: hidden;*/
   cursor: pointer; 
 }
 
@@ -232,12 +221,13 @@ p {
 .right > button:hover{
   opacity: 0.8;
 }
-@media screen and (max-width:580px) {
-    .questions:nth-child(1) > article > p{
-        width: 70%;
-    }
 
-    body{
-        margin-top: 50px;
-    }
+@media screen and (max-width:580px) {
+  .questions:nth-child(1) > div > p{
+      width: 70%;
+  }
+
+  body{
+      margin-top: 50px;
+  }
 }

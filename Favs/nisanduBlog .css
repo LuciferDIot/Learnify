@@ -7,16 +7,18 @@
 }
 
 html{
-    font-size: 16px !important;
+    font-size: 16px;
+    background-color: black;
 }
+
 .navbar {
+    position: sticky;
     height: 100px;
     display: flex;
     justify-content: space-between;
-    position: fixed;
     width: 100%;
     background-color: black;
-    z-index: 9999;
+    z-index: 4;
 }
 
 .navbar > img{
@@ -81,37 +83,18 @@ html{
     font-size: 14px;
 }
 
-body{
-    margin: 0;
-    background-color: black;
-    color: white;
-    width: 100vw;
-    height: auto;
-    overflow-x: hidden;
-}
+/* my part */
 
-/* my edit */
+.container {
+    width: 100%;
+    height: 72vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 
-body{
-    background-color: black;
-    color: white;
-    margin-bottom: 120px;
-    opacity: 0.8;
-}
-
-.body-container{
-  display: flex;
-  flex-direction: column;
-}
-
-.bg-img {
-    background-image: url("../Favs/assets/BlogBg.jpg");
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-   
+    background-image: url("./assets/nisandu/background.jpg");
     background-size: cover;
     background-position: center;
     top: 0;
@@ -119,110 +102,155 @@ body{
     left: 0;
     right: 0;
     z-index: -1;
+  }
 
-} 
-
-.bg-img::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.6); /* change the opacity as needed */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.bg-text {
-    z-index: 1;
-    text-align: center;
+.container::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.75); /* change the opacity as needed */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255); 
-}
-
-.bg-text>h1{
-    font-size: 4rem;
-}
-
-.bg-text>h2{
-    font-size: 2rem;
-}
-
-#book-all{
-    padding: 2% 5%;
-}
-
-h2{
-    color: aqua;
-    font-size: 2rem;
-}
-
-u{
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.books-link{
-    margin-top: 20px;
-}
-
-.books-link > li{
-    width: 100%;
-    position: relative;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-}
-
-#info{
-    font-size: 1.2rem;
-}
-
-.books-link > li> label{
-    text-align: left;
-    position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
-.books-link > li> a{
-    width: 10%;
-    position: absolute;
+.maintopic{
     text-align: center;
-    left: 50%;
-    padding: 5px 20px;
+    z-index: 1;
+}
+
+.maintopic > p{ 
+    font-size: 1.5rem;
+    padding-top: 4.5%;
+}
+
+.site-name{
+    font-size: 6rem;
+    
+}
+
+.content-summery{
     background-color: #633B48;
-    border-radius: 5px;
+    position: sticky;
+    top: 8%;
+    width: 80vw;
+    height: 80vh;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    color: rgb(211, 106, 129);
-    text-decoration: none;
+    border-radius: 5px;
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 2%;
+    overflow-y: scroll;
 }
 
-.books-link > li> a:hover{
-    opacity: 0.8;
-}
-
-p>img{
-    float: left;
-    margin-right:15px;
-    padding :10px 0px;
-} 
-
-@media screen and (max-height:850px){
-    html{
-        font-size: 14px;
+@media screen and (max-width:1560px) {
+    .content-summery{
+        width: 100vw;
     }
 }
 
-/* footer */
+@media screen and (max-width:1328px) {
+    .content-summery{
+        width: 80vw;
+    }
+}
 
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb {
+    background: #633B48;
+    border-radius: 5px;
+    border: 0.5px solid black;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #633B48;
+}
+
+.content-summery > img {
+    width: 80%;
+    margin-bottom: 6%;
+}
+
+.topic {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.details{
+    line-height: 2;
+}
+
+.blog-content{
+    margin-top: 5%;
+    display: flex;
+}
+
+.sub-topics{
+    text-align: left;
+    margin-left: 10%;
+}
+
+.sub-topics > p{
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+}
+
+#book{
+    height: 55vh;
+}
+
+.content-details{
+    margin: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.2rem;
+}
+
+.author{
+    display: flex;
+}
+
+.author > div > p {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sub-topic{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: aqua;
+}
+
+
+/* footer */
 footer {
-    position: fixed;
-    bottom: 0;
     padding: 1% 0;
     color: white;
     width: 100%;
@@ -230,6 +258,7 @@ footer {
     justify-content: space-around;
     background-color: black;
     z-index: 1;
+    position: sticky;
   }
 
   .bottom-container {
@@ -243,20 +272,20 @@ footer {
     margin-bottom: 10px;
   }
   
-  .url-container > div > img{
+  .url-containers > div > img{
     width: 100%;
     height: 100%;
   }
 
-  .url-container > div > img:hover{
+  .url-containers > div > img:hover{
     opacity: 0.6;
   }
 
-  .url-container > div{
+  .url-containers > div{
     width: 16%;
   }
 
-  .url-container{
+  .url-containers{
     display: flex;
     justify-content: space-between;
   }
@@ -273,7 +302,6 @@ footer {
   .right > button{
     width: 100%;
     height: 50%;
-    margin-top: 6px;
     background-color: #633B48;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -296,15 +324,10 @@ footer {
     }
 
     html{
-        font-size: 8px;
+        font-size: 8px !important;
     }
 
     .nav-links{
         width: 80%;
     }
-}
-
-
-#page-editor{
-    color: white;
 }
