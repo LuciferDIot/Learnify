@@ -73,6 +73,10 @@
 
 /*mine*/
 
+*{
+    font-family: 'Comic Sans MS', cursive, sans-serif
+}
+
 .body-container{
     height: 72vh;
     padding-top: 120px;
